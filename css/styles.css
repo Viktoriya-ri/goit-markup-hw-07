@@ -82,6 +82,7 @@ img {
 @media only screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding: 0 15px;
   }
   
 }
@@ -368,9 +369,16 @@ img {
   cursor: pointer;
   padding: 12px 24px;
 }
-
+    /*-------Phone styles*/
 .container-team {
+  display: none;
   padding-bottom: 120px;
+}
+@media sonly screen and (min-width: 1158px) {
+  .container-team {
+   display: block;
+  }
+  
 }
 .title-secondtf {
   font-size: 36px;
@@ -875,7 +883,7 @@ img {
   outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .menu-toggle {
     display: none;
   }
