@@ -20,18 +20,29 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header" data-header>
       <div class="header-container container">
+        <a class="header-logo link" href="./index.html"
+          >Web<span class="name-header">Studio</span></a
+        >
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="icon icon-charm_menu-hamburger">
+            <use href="./images/icon.svg#icon-charm_menu-hamburger"></use>
+          </svg>
+        </button>
         <nav class="header-nav list">
-          <a class="header-logo link" href="./index.html"
-            >Web<span class="name-header">Studio</span></a
-          >
           <ul class="menu-list list">
             <li class="menu">
-              <a class="header-nav-link link" href="./index.html">Studio</a>
+              <a class="header-nav-link current link" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="menu">
-              <a class="header-nav-link current link" href="./portfolio.html"
+              <a class="header-nav-link link" href="./portfolio.html"
                 >Portfolio</a
               >
             </li>
@@ -40,7 +51,7 @@
             </li>
           </ul>
         </nav>
-        <address class="page">
+        <address class="page-address">
           <ul class="page-list list">
             <li class="mailto">
               <a class="address link" href="mailto:info@devstudio.com"
@@ -65,7 +76,7 @@
             <li>
               <button class="button-p link" type="button">All</button>
             </li>
-            <li>
+            <li >
               <button class="button-p link" type="button">Web Site</button>
             </li>
             <li>
@@ -78,8 +89,8 @@
               <button class="button-p link" type="button">Marketing</button>
             </li>
           </ul>
-          <ul class="list-work list">
-            <li class="our-work">
+          <ul class="list-work list card-set">
+            <li class="our-work card-set-work">
               <a class="card-link link" href="">
                 <div class="ptf-box">
                   <img
@@ -103,7 +114,7 @@
               </a>
             </li>
 
-            <li class="our-work">
+            <li class="our-work card-set-work">
               <a class="card-link link" href="">
                 <div class="ptf-box">
                   <img
@@ -127,7 +138,7 @@
               </a>
             </li>
 
-            <li class="our-work">
+            <li class="our-work card-set-work">
               <a class="card-link link" href="">
                 <div class="ptf-box">
                   <img
@@ -151,7 +162,7 @@
               </a>
             </li>
 
-            <li class="our-work">
+            <li class="our-work card-set-work">
               <a class="card-link link" href="">
                 <div class="ptf-box">
                   <img
@@ -175,7 +186,7 @@
               </a>
             </li>
 
-            <li class="our-work">
+            <li class="our-work card-set-work">
               <a class="card-link link" href="">
                 <div class="ptf-box">
                   <img
@@ -199,7 +210,7 @@
               </a>
             </li>
 
-            <li class="our-work">
+            <li class="our-work card-set-work">
               <a class="card-link link" href="">
                 <div class="ptf-box">
                   <img
@@ -223,7 +234,7 @@
               </a>
             </li>
 
-            <li class="our-work">
+            <li class="our-work card-set-work">
               <a class="card-link link" href="">
                 <div class="ptf-box">
                   <img
@@ -247,7 +258,7 @@
               </a>
             </li>
 
-            <li class="our-work">
+            <li class="our-work card-set-work">
               <a class="card-link link" href="">
                 <div class="ptf-box">
                   <img
@@ -271,7 +282,7 @@
               </a>
             </li>
 
-            <li class="our-work">
+            <li class="our-work card-set-work">
               <a class="card-link link" href="">
                 <div class="ptf-box">
                   <img
