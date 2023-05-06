@@ -232,6 +232,7 @@ img {
 /*Main  Section first*/
 
 .title-section {
+
   padding: 188px 0;
 }
 .backgr-section {
@@ -260,6 +261,11 @@ img {
   }
 }
 .title {
+  position: absolute;
+width: 320px;
+height: 80px;
+left: 54px;
+top: 182px;
   max-width: 496px;
   margin: 0 auto 48px;
   font-size: 56px;
@@ -1028,9 +1034,7 @@ img {
   align-items: flex-start;
   padding: 0px;
   gap: 40px;
- 
 }
-
 
 .mobile-contacts {
   margin-top: 284px;
