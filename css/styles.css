@@ -260,9 +260,9 @@ img {
   }
 }
 .title {
-  max-width: 496px;
+  max-width: 428px;
   margin: 0 auto 48px;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
@@ -1020,7 +1020,7 @@ img {
     list-style: none;
     margin-bottom: auto;
   }
-.mobile-menu-link{
+.mobile-menu-link {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -1028,8 +1028,8 @@ img {
     text-transform: capitalize;
     color: var(--color-navy-blue);
   }
-  .mobile-menu-link.current{
-    color: var(--accent-color);
+  .mobile-menu-link.current {
+    color: var(--color-iris);
   }
 
 .mobile-contacts {
