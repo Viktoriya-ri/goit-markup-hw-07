@@ -987,11 +987,14 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+
+  display: flex;
+  flex-direction: column;
+
   width: 100vw;
   height: 100vh;
   padding: 32px;
-
-  background-color: var(--color-cloud);
+  background-color: #3f51b5;
   z-index: 999;
 
   transform: translateX(100%);
@@ -1006,34 +1009,25 @@ img {
   position: absolute;
   top: 16px;
   right: 16px;
-  color: var(--color-naviblue);
+  color: #fff;
 }
 
 .mobile-menu {
   padding: 0;
   margin: 0;
   list-style: none;
+
+  margin-bottom: auto;
 }
 
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  color: var(--color-naviblue);
+  color: #fff;
   text-decoration: none;
 }
-.mobile-menu-link,
-.mobile-contacts-address {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 40px;
- 
-}
-
 
 .mobile-contacts {
-  margin-top: 284px;
   margin-bottom: 44px;
   color: var(--secondary-txt-cl);
 }
