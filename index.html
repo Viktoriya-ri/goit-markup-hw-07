@@ -40,8 +40,8 @@
             <use href="./images/icon.svg#icon-charm_menu-hamburger"></use>
           </svg>
         </button>
-        <nav class="header-nav">
-          <ul class="header-nav-list list">
+        <nav class="header-nav list">
+          <ul class="menu-list list">
             <li class="menu">
               <a class="header-nav-link current link" href="./index.html"
                 >Studio</a
@@ -76,7 +76,7 @@
 
     <!--MAIN-->
 
-   <main>
+    <!-- <main>
       <section class="backgr-section title-section" id="backgr">
         <div class="section-container container">
           <h1 class="title">Effective Solutions for Your Business</h1>
@@ -84,7 +84,7 @@
             Order Service
           </button>
         </div>
-     </section>
+      </section>
       <section class="facts-container">
         <div class="container">
           <h2 class="visually-hidden">Our advantages</h2>
@@ -177,10 +177,15 @@
           <ul class="list-item list card-set">
             <li class="item card-set-team">
               <img
-                src="./images/team/mark_guerrero.jpg"
+                class="card"
+                srcset="
+                  ./images/team/mark-guerrero_264.jpg 264w,
+                  ./images/team/mark-guerrero_528.j   528w
+                "
+                sizes="(min-width: 480px) "
+                src="./images/team/mark-guerrero_264.jpg 1x"
                 alt="Mark Guerrero"
                 width="264"
-                class="card"
               />
               <div class="employee">
                 <h3 class="fact-title">Mark Guerrero</h3>
@@ -620,11 +625,11 @@
           </form>
         </div>
       </div>
-    </footer>-->
+    </footer> -->
+  
 
     <!--Modal window-->
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
+    <!-- <div class="backdrop is-hidden" data-modal>      <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="15" height="15">
             <use href="./images/icon.svg#icon-close-black"></use>
@@ -703,8 +708,8 @@
           <button class="button-link" type="submit">Send</button>
         </form>
       </div>
-    </div>
-    -->
+    </div> -->
+  
 
     <!--Mobile menu-->
     <div class="menu-container js-menu-container" id="mobile-menu">
@@ -723,22 +728,30 @@
 
       <ul class="mobile-menu list">
         <li class="mobile-menu-nav">
-          <a  class="mobile-menu-link current link" href="./index.html">Studio</a>
+          <a class="mobile-menu-link current link" href="./index.html"
+            >Studio</a
+          >
         </li>
         <li class="mobile-menu-nav">
-          <a  class="mobile-menu-link current link" href="./portfolio.html">Portfolio</a>
+          <a class="mobile-menu-link current link" href="./portfolio.html"
+            >Portfolio</a
+          >
         </li>
         <li class="mobile-menu-nav">
-          <a  class="mobile-menu-link current link" href="">Contacts</a>
+          <a class="mobile-menu-link current link" href="">Contacts</a>
         </li>
       </ul>
 
       <ul class="mobile-contacts list">
         <li class="mobile-contacts-address">
-          <a class="link" href="tel:+110001111111"><span class="mobile-contacts-tel">+11 (000) 111-11-11</span></a>
+          <a class="link" href="tel:+110001111111"
+            ><span class="mobile-contacts-tel">+11 (000) 111-11-11</span></a
+          >
         </li>
         <li class="mobile-contacts-address">
-          <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          <a class="link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
         </li>
       </ul>
       <ul class="mobile-socials list">
