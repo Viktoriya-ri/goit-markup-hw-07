@@ -38,8 +38,8 @@ p {
 
 img {
   display: block;
-  flex-wrap: wrap;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -69,26 +69,23 @@ img {
 }
 .container {
   /*Phone styles & >*/
-  min-width: 320px;
   max-width: 428px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 16px;
-  padding-bottom: ;
 
   outline: 2px solid red;
   outline-offset: -2px;
 }
 
-/*Talet styles & >*/
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 768px;
   }
 }
 
-/*Desktop styles & >*/
-@media only screen and (min-width: 1158px) {
+@media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
   }
@@ -267,14 +264,53 @@ img {
   background-position: center;
   background-size: cover;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 480px) {
   .backgr-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background/people-office_mob@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .backgr-section {
+        background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background/people-office_mob@2x.jpg);
+    }
+
   }
 }
-@media only screen and (min-width: 1158px) {
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   .backgr-section {
-    max-width: 1440px;
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background/people-office_tab@1x.jpg));
   }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .backgr-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background/people-office_tab@2x.jpg);
+    
+    }
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .backgr-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background/people-office_tab@2x.jpg);
+    
+    }
 }
 .section-container {
 }
