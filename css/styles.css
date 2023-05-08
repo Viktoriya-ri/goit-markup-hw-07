@@ -133,11 +133,6 @@ img {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-@media only screen and (min-width: 768px) and (min-width: 1158px) {
-  .page-header {
-    padding: 24px 0;
-  }
-}
 
 .header-container {
   display: flex;
@@ -462,7 +457,11 @@ img {
   flex-grow: 0;
   padding-bottom: 8px;
 }
-
+@media only screen and (min-width: 768px) {
+  .fact-title-link {
+    text-align: left;
+  }
+}
 @media only screen and (min-width: 1158px) {
   .fact-title {
     font-weight: 500;
@@ -479,10 +478,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-slate);
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
+
   padding-left: 16px;
 }
 @media only screen and (min-width: 768px) {
@@ -583,9 +579,25 @@ img {
 .card-set {
 }
 .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 32px;
+  gap: 32px;
+  background: #ffffff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  margin-bottom: 72px;
 }
-.card-set-team {
+@m @media only screen and (min-width: 768px) {
+  .card-set-team {
+    width: calc((100% - 24px) / 2);
+    padding-right: 24px;
+  }
 }
+
 .card {
 }
 .employee {
@@ -605,17 +617,6 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--color-slate);
-}
-
-.socials {
-}
-.socials-list {
-}
-.socials-link {
-}
-.link {
-}
-.socials-icon {
 }
 
 /*Socials icoms*/
@@ -720,7 +721,7 @@ img {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  margin-bottom: 8px;
+  margin-bottom: 72px;
 }
 
 /* Section fifth Clients*/
@@ -733,15 +734,26 @@ img {
   gap: 24px;
 }
 .client-list {
-  width: calc((100% - 120px) / 6);
-  height: 88px;
+  width: calc((100% - 16px) / 2);
+}
+@media only screen and (min-width: 468px) {
+  .client-list {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+  }
+}
+
+@media only screen and (min-width: 768) {
 }
 @media only screen and (min-width: 428px) and (max-width: 768px) {
+  .client-card {
+    width: calc((100% - 16px) / 2);
+  }
   .card-set-client {
   }
 }
 .client-card {
-  width: 100%;
+  width: calc((100% - 16px) / 2);
   height: 100%;
   border: 1px solid var(--color-light-slate);
   border-radius: 4px;
@@ -796,6 +808,7 @@ img {
   color: var(--color-cloud);
 }
 .footer-container {
+  m-width: ;
   display: flex;
   align-items: baseline;
 }
