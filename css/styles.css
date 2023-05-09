@@ -75,11 +75,11 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 112px;
+    padding-bottom: 112px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -99,7 +99,7 @@ img {
 /*Talet styles & >*/
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 736px;
   }
 }
 
@@ -111,14 +111,16 @@ img {
   }
 }
 
-/*Header*/
+/*----Header-----*/
 
-.page-header {
-  padding: 24px 0 22px;
+@media only screen and (max-width: 767) {
+  .page-header {
+    padding: 24px 0 22px;
 
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  }
 }
 
 .header-container {
@@ -219,8 +221,6 @@ img {
   .page-list {
     display: block;
   }
-}
-.page-list {
 }
 
 .link:hover,
@@ -356,20 +356,27 @@ img {
   gap: 72px 24px;
   padding: 96px 0;
 }
-
+@media only screen and (min-width: 768px) {
+  .facts-container {
+    max-width: 736px;
+  }
+}
 @media only screen and (min-width: 1158px) {
   .facts-container {
     max-width: 1128px;
     padding: 120px 0;
   }
 }
-.fact-cont {
-  max-width: 396px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 72px;
+
+@media only screen and (max-width: 767px) {
+  .fact-cont {
+    max-width: 396px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 72px;
+  }
 }
 .list-item {
   display: flex;
@@ -378,27 +385,32 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .list-item {
-    --items: 2;
-    max-width: 736px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
   }
 }
 @media only screen and (min-width: 1158px) {
   .list-item {
-    --items: 4;
-    max-width: 1128px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
   }
-}
-.advantages {
-  width: calc((100% - var(--indent) * (var(--items)-1)) / var(--items));
 }
 @media only screen and (min-width: 768px) {
   .advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: calc((100% - 24px) / 2);
   }
 }
 @media only screen and (min-width: 1158px) {
   .advantages {
-    --items: 4;
-    width: calc((100% - var(--indent) * (var(--items)-1)) / var(--items));
+    width: calc((100% - 72px) / 4);
+    background-color: var(--color-white);
+    border-radius: 0px 0px 4px 4px;
   }
 }
 
@@ -526,7 +538,7 @@ img {
   text-transform: capitalize;
   color: var(--color-naviblue);
 }
-.list-item {
+.list-item-team {
 }
 .list {
 }
@@ -688,16 +700,20 @@ img {
   gap: 24px;
 }
 .client-list {
-  width: calc((100% - 16px) / 2);
+  flex-basis: calc((100% - 16px) / 2);
+  height: 88px;
+}
+@media only screen and (min-width: 768) {
+  .client-list {
+    flex-basis: calc((100% - 48px) / 3);
+    height: 88px;
+  }
 }
 @media only screen and (min-width: 1158px) {
   .client-list {
     width: calc((100% - 120px) / 6);
     height: 88px;
   }
-}
-
-@media only screen and (min-width: 768) {
 }
 
 .card-set-client {
@@ -1192,6 +1208,7 @@ img {
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  padding-top: 80px;
 }
 
 .menu-container.is-open {
@@ -1211,14 +1228,14 @@ img {
   gap: 40px;
   color: var(--color-navy-blue);
   text-decoration: none;
-  padding-top: 80px;
-  margin-left: 40px;
+
   list-style: none;
 }
  {
 }
 .mobile-contacts-address {
   margin-top: auto;
+  margin-bottom: 40px;
 }
 .mobile-menu-link,
 .mobile-contact-link {
@@ -1227,6 +1244,7 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  text-decoration: none;
   color: var(--color-navy-blue);
 }
 .mobile-menu-link.current {
@@ -1241,7 +1259,7 @@ img {
 
 .mobile-contacts {
   margin-bottom: 48px;
-  margin-left: 40px;
+
   color: var(--color-slate);
 }
 
@@ -1258,5 +1276,4 @@ img {
 .mobile-socials {
   display: flex;
   gap: 56px;
-  margin-left: 40px;
 }
