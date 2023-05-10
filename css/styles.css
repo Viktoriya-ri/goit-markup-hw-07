@@ -57,7 +57,7 @@ img {
 
 .card-set {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--indent);
 }
 .card-set-item {
@@ -90,7 +90,6 @@ img {
   min-width: 320px;
   max-width: 428px;
   margin: 0 auto;
-  padding: 0 16px;
 
   outline: 2px solid red;
   outline-offset: -2px;
@@ -99,7 +98,7 @@ img {
 /*Talet styles & >*/
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 }
 
@@ -123,6 +122,7 @@ img {
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   }
 }
+
 @media only screen and (min-width: 1158px) {
   .page-header {
     display: flex;
@@ -133,7 +133,14 @@ img {
   display: flex;
   align-items: center;
 }
-
+@media only screen and (min-width: 468px) {
+  .header-container {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
+}
 .header-logo {
   font-family: 'Raleway';
   font-weight: 800;
@@ -147,6 +154,7 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .header-logo {
+    padding-left: 16px;
     margin-right: 120px;
   }
 }
@@ -169,7 +177,14 @@ img {
 .page-list {
   display: flex;
   flex-basis: calc((100% - 72px) / 4);
+}
+.menu-list {
   gap: 40px;
+}
+@media only screen and (min-width: 1158px) {
+  .menu-list {
+    margin-right: 297px;
+  }
 }
 .menu {
   padding: 24px 0;
@@ -213,22 +228,34 @@ img {
 .page-address {
   font-style: normal;
 }
+
 .mailto {
   color: var(--color-slate);
 }
+
 .tel {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5px;
   letter-spacing: 0.02em;
   color: var(--color-slate);
+  padding-bottom: 16px;
 }
 @media only screen and (min-width: 768px) {
   .page-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-right: 16px;
   }
 }
-
+@media only screen and (min-width: 1158px) {
+  .page-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+}
 .link:hover,
 .link:focus {
   color: var(--color-ocean);
@@ -270,7 +297,7 @@ img {
 }
 @media only screen and (min-width: 1158px) {
   .backgr-section {
-    max-width: 1158px;
+    max-width: 1440px;
     padding: 188px 0;
   }
 }
@@ -364,20 +391,6 @@ img {
   gap: 72px 24px;
   padding: 96px 0;
 }
-@media only screen and (min-width: 768px) {
-  .facts-container {
-    max-width: 736px;
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .facts-container {
-    max-width: 1128px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 120px 0;
-  }
-}
-
 @media only screen and (max-width: 767px) {
   .fact-cont {
     max-width: 396px;
@@ -388,18 +401,14 @@ img {
     gap: 72px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .fact-cont {
-    width: 582px;
-  }
-}
+
 .list-item {
   display: flex;
   flex-wrap: wrap;
   gap: 72px 16px;
   --items: 1;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .list-item {
     display: flex;
     flex-wrap: wrap;
@@ -412,12 +421,11 @@ img {
     gap: 24px;
   }
 }
+.advantages {
+  width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
 @media only screen and (min-width: 768px) {
   .advantages {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
     width: calc((100% - 24px) / 2);
   }
 }
@@ -442,7 +450,7 @@ img {
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 @media only screen and (min-width: 768px) {
   .fact-title-link {
@@ -450,7 +458,7 @@ img {
   }
 }
 @media only screen and (min-width: 1158px) {
-  .fact-title {
+  .fact-title-link {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -492,6 +500,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 264px;
     height: 112px;
     background-color: var(--color-cloud);
     border-radius: 4px;
@@ -501,39 +510,28 @@ img {
 
 /*----Section three----*/
 
-.team-container {
-  max-width: 294px;
-}
-
-.list-item {
+.list-item-doing {
   display: flex;
-  align-items: center;
-  padding: auto;
+  flex-wrap: wrap;
+  gap: 24px;
 }
-
 .item-three {
   width: calc((100% - 48px) / 3);
   background-color: var(--color-white);
 }
-.card {
-  --items: 1;
-  width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-}
-
-.fact-descr {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-
-  letter-spacing: 0.02em;
-  color: var(--color-slate);
-}
 
 /*---- Section Team----*/
-
-.team {
+@media only screen and (max-width: 767px) {
+  .team-container {
+    max-width: 294px;
+  }
 }
 
+@media only screen and (min-width: 1158px) {
+  .team-container {
+    max-width: 1158px;
+  }
+}
 .title-secondtf {
   font-weight: 700;
   font-size: 36px;
@@ -543,7 +541,18 @@ img {
   text-transform: capitalize;
   color: var(--color-naviblue);
 }
-
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .card-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+}
 .item {
   width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   background: #ffffff;
@@ -565,7 +574,6 @@ img {
 @media only screen and (min-width: 768px) {
   .card-set-team {
     width: calc((100% - 24px) / 2);
-    padding-right: 24px;
   }
 }
 .fact-title-team {
@@ -673,11 +681,11 @@ img {
   color: var(--color-naviblue);
   margin-bottom: 72px;
 }
-.list-item {
+.list-item-team {
   display: flex;
-  flex-wrap: wrap;
-  gap: 72px;
+  gap: 24px;
 }
+
 .employee {
   text-align: center;
   padding: 32px 0;
@@ -693,21 +701,28 @@ img {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .clients-container {
     width: 582px;
   }
 }
 .clients {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  flex-wrap: nowrap;
+  gap: 72px 24px;
+}
+@media only screen and (min-width: 468px) {
+  .clients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 16px;
+  }
 }
 .client-list {
   flex-basis: calc((100% - 16px) / 2);
   height: 88px;
 }
-@media only screen and (min-width: 768) {
+@media only screen and (min-width: 768) and (max-width: 1157px) {
   .client-list {
     flex-basis: calc((100% - 48px) / 3);
     height: 88px;
