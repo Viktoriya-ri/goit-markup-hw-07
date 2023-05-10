@@ -509,7 +509,15 @@ img {
 }
 
 /*----Section three----*/
-
+.container-doing {
+  display: flex;
+  width: 1128px;
+}
+@media only screen and (min-width: 320) and (max-width: 1157px) {
+  .container-doing {
+    display: none;
+  }
+}
 .list-item-doing {
   display: flex;
   flex-wrap: wrap;
@@ -775,6 +783,15 @@ img {
   background-color: var(--color-naviblue);
   padding: 100px 0;
 }
+@media only screen and (min-width: 468px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 .footer-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -795,9 +812,13 @@ img {
   color: var(--color-cloud);
 }
 .footer-container {
-  m-width: ;
   display: flex;
   align-items: baseline;
+}
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
 }
 .parag-social {
   font-weight: 500;
@@ -828,8 +849,21 @@ img {
 .socials-link-footer:focus {
   background-color: var(--color-green);
 }
+@media only screen and (min-width: 468px) {
+  .form-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .sub-form {
   display: flex;
+}
+@media only screen and (min-width: 468px) {
+  .sub-form {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .field-form-name {
   font-weight: 500;
@@ -1030,6 +1064,9 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 200ms ease-in 200ms, opacity 200ms ease-in 200ms;
+}
+@media only screen and (min-width: 320px) {
+  width: calc(100% - 30px);
 }
 .backdrop.is-hidden.modal {
   transform: translate(-50%, -50%) rotate(360deg) scale(0.3);
