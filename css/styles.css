@@ -514,7 +514,7 @@ img {
   width: 1128px;
 }
 @media only screen and (min-width: 320) and (max-width: 1157px) {
-  .container{
+  .container {
     display: none;
   }
 }
@@ -773,51 +773,66 @@ img {
 
 /*Footer*/
 
-.section-footer {
-  margin-right: 120px;
-}
-.name-footer {
-  color: var(--color-cloud);
-}
 .footer {
   background-color: var(--color-naviblue);
-  padding: 100px 0;
+  padding: 96px 0;
 }
-@media only screen and (min-width: 468px) {
+.footer-container {
+}
+
+@media only screen and (min-width: 428px) {
+  .footer-container {
+    width: 428px;
+  }
+}
+@media only screen and (max-width: 767px) {
   .footer-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
+    align-items: center;
+    margin-bottom: 72px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .section-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+}
+.name-footer {
+  color: var(--color-cloud);
+}
+
+
 .footer-logo {
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  text-transform: uppercase;
   color: var(--color-iris);
   letter-spacing: 0.03em;
+  text-transform: uppercase;
   margin-bottom: 16px;
-  display: inline-block;
 }
 .text-bottom {
-  max-width: 264px;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-cloud);
+  width: 264px;
 }
-.footer-container {
-  display: flex;
-  align-items: baseline;
-}
-@media only screen and (min-width: 768px) {
-  .footer-container {
+@media only screen and (max-width: 767px) {
+  .social-footer {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 72px;
   }
 }
 .parag-social {
@@ -830,6 +845,7 @@ img {
 }
 .list-item-social {
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 .icons-list {
