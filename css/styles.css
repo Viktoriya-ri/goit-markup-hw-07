@@ -118,34 +118,13 @@ img {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-@media only screen and (max-width: 767) {
-  .page-header {
-    display: flex;
-    flex-direction: column;
-    padding: 24px 0 22px;
-    border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-  }
-}
 
-@media only screen and (min-width: 1158px) {
-  .page-header {
-    display: flex;
-    flex-direction: row;
-  }
-}
 .header-container {
   display: flex;
   align-items: center;
   padding: 0 15px;
 }
-@media only screen and (min-width: 468px) {
-  .header-container {
-    display: flex;
-    align-items: center;
-  }
-}
+
 .header-logo {
   font-family: 'Raleway';
   font-weight: 800;
@@ -180,8 +159,7 @@ img {
     display: none;
   }
 }
-.menu-list,
-.page-list {
+.menu-list {
   display: flex;
   flex-basis: calc((100% - 72px) / 4);
 }
@@ -215,6 +193,9 @@ img {
   letter-spacing: 0.02em;
   color: var(--color-navi-blue-modal);
   padding: 24px 0;
+}
+.page-address {
+  font-style: normal;
 }
 .address {
   font-weight: 500;
@@ -325,7 +306,7 @@ img {
       url(../images/background/people-office_mob@1x.jpg);
   }
 }
-@media only screen and (min-width: 429px) and (max-width: 768) {
+@media only screen and (min-width: 429px) and (max-width: 768px) {
   .backgr-section {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -576,7 +557,6 @@ img {
 }
 @media only screen and (min-width: minwidthpx) {
    {
-    
   }
 }
 .list-item-doing {
@@ -853,39 +833,30 @@ img {
   background-color: var(--color-naviblue);
   padding: 96px 0;
 }
-@media only screen and (min-width: 1158px) {
-  .footer {
-    padding: 100px 0;
+
+@media only screen and (max-width: 427px) {
+  .footer-container {
+    width: 320px;
   }
 }
-
 @media only screen and (min-width: 428px) {
   .footer-container {
-    max-width: 428px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 428px;
   }
 }
 @media only screen and (min-width: 768px) {
   .footer-container {
-    max-width: 582px;
+    width: 582px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 72px 24px;
+   flex-wrap: wrap;
+   gap: 72px 24px;
   }
 }
 @media only screen and (min-width: 1158px) {
   .footer-container {
-    max-width: 1440px;
-    display: flex;
+    width: 100%;
     flex-wrap: nowrap;
+    gap: 0;
   }
 }
 
@@ -895,12 +866,6 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 72px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .section-footer {
-    margin-right: 24px;
     margin-bottom: 72px;
   }
 }
@@ -943,7 +908,11 @@ img {
     margin-bottom: 72px;
   }
 }
-
+@media only screen and (min-width: 1158px) {
+  .social-footer {
+    margin-right: 80px;
+  }
+}
 .parag-social {
   font-weight: 500;
   font-size: 16px;
@@ -958,15 +927,13 @@ img {
   gap: 16px;
 }
 .list {
-  width: 100%;
+ list-style: none;
 }
 .icons-list {
   width: 40px;
   height: 40px;
 }
-.social-footer {
-  margin-right: 80px;
-}
+
 .socials-link-footer {
   display: flex;
   align-items: center;
@@ -1192,18 +1159,14 @@ img {
  =================================================
  */
 .backdrop {
+  overflow: in hidden;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   backdrop-filter: blur(6px);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
-  transition: opacity var(--anim-fast), visibility var(--anim-fast);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -1213,22 +1176,22 @@ img {
 }
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0) scale(1);
-  opacity: 1;
-  width: 408px;
-  min-height: 584px;
+  top: calc(50% - 288px);
+  left: calc(50% - 204px);
+  width: 392px;
+  height: 584px;
+  max-height: 90vh;
   padding: 72px 24px 24px 24px;
-  background-color: var(--color-dairy);
+  overflow-y: auto;
+  background: var(--color-dairy);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 200ms ease-in 200ms, opacity 200ms ease-in 200ms;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 427px) {
   .modal {
-    width: calc(100% - 30px);
+    width: 320px;
+    left: calc(50% - 160px);
   }
 }
 .backdrop.is-hidden.modal {
@@ -1237,22 +1200,20 @@ img {
 }
 .modal-btn {
   position: absolute;
-  left: 360px;
   top: 24px;
+  right: 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 24px;
   height: 24px;
+  margin-left: auto;
   color: var(--color-naviblue);
   background-color: var(--color-cornflower);
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  cursor: pointer;
   transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 24px;
 }
 .modal-icon {
   width: 8px;
@@ -1382,8 +1343,8 @@ img {
 
 /*-----Mobile menu styles-----*/
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+  min-height: 22px;
+  min-width: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1396,7 +1357,6 @@ img {
   border: none;
   border-radius: 50%;
   outline: none;
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -1452,13 +1412,21 @@ img {
 
   list-style: none;
 }
-
+@media only screen and (min-width: 320px) {
+  .mobile-contact-link {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--color-iris);
+  }
+}
 .mobile-contacts-address {
   margin-top: auto;
   margin-bottom: 40px;
 }
-.mobile-menu-link,
-.mobile-contact-link {
+.mobile-menu-link {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -1493,7 +1461,9 @@ img {
   order: 1;
   flex-grow: 0;
 }
-.mobile-socials {
-  display: flex;
-  gap: 56px;
+@media only screen and (min-width: 320px) {
+  .mobile-socials {
+    display: flex;
+    gap: 32px;
+  }
 }
