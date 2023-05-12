@@ -38,8 +38,8 @@ p {
 
 img {
   display: block;
-  flex-wrap: wrap;
   width: 100%;
+  height: auto;
 }
 
 .link {
@@ -70,14 +70,8 @@ img {
   cursor: pointer;
 }
 .section {
-  padding-top: 84px;
-  padding-bottom: 84px;
-}
-@media only screen and (min-width: 768px) {
-  .section {
-    padding-top: 112px;
-    padding-bottom: 112px;
-  }
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 @media only screen and (min-width: 1158px) {
@@ -118,6 +112,7 @@ img {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+
 
 .header-container {
   display: flex;
@@ -306,6 +301,7 @@ img {
       url(../images/background/people-office_mob@1x.jpg);
   }
 }
+
 @media only screen and (min-width: 429px) and (max-width: 768px) {
   .backgr-section {
     background-image: linear-gradient(
