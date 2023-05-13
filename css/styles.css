@@ -203,18 +203,23 @@ img {
   }
 }
 @media only screen and (min-width: 1158px) {
-.address {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--color-navi-blue-modal);
-  padding: 24px 0;
+  .address {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-navi-blue-modal);
+    padding: 24px 0;
+  }
 }
-}
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .mailto {
     margin-bottom: 12px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .mailto {
+    margin-bottom: 0;
   }
 }
 .header-logo {
@@ -226,7 +231,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-iris);
-  padding-left: 16px;
 }
 .header-logo:hover,
 .header-logo:focus {
@@ -257,8 +261,6 @@ img {
   .page-list {
     display: flex;
     flex-direction: column;
-    padding-top: 16px;
-    padding-right: 16px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -646,7 +648,8 @@ img {
 @media only screen and (min-width: 1158px) {
   .list-item-team {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 72px 24px;
   }
 }
@@ -790,8 +793,14 @@ img {
 
 /*---Section fifth Clients-----*/
 .client-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media only screen and (min-width: 1158px) {
+  .client-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .clients-container {
@@ -1022,6 +1031,8 @@ img {
   width: 100%;
   margin-right: 24px;
   margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
 }
 .field-input {
   width: 264px;
@@ -1037,7 +1048,6 @@ img {
   outline: transparent;
   color: var(--color-white);
 }
-
 
 .field-input::placeholder {
   color: var(--color-white);
@@ -1066,7 +1076,7 @@ img {
   border: none;
   border-radius: 4px;
   cursor: pointer;
- 
+
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
