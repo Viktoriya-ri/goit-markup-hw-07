@@ -1032,7 +1032,7 @@ img {
   margin-right: 24px;
   margin-bottom: 16px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .field-input {
   width: 264px;
